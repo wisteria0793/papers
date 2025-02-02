@@ -4,7 +4,7 @@ from keybert import KeyBERT
 
 
 def fetch_papers(keyword, category):
-    url = f"http://export.arxiv.org/api/query?search_query=all:{keyword}+AND+cat:{category}&start=0&max_results=3"
+    url = f"http://export.arxiv.org/api/query?search_query=all:{keyword}+AND+cat:{category}&start=0&max_results=10"
     response = requests.get(url)
     
     if response.status_code != 200:
